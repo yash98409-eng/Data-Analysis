@@ -1,134 +1,63 @@
- Export Business Growth & Low-Growth An
- Turning Business Data into Actionable Growth Strategies
+# 📊 Export Data Analytics & Business Growth Strategy
 
-**An End-to-End Data Analytics Project | Python • SQL • Power BI • Business Intelligence**
-
----
-
-##  Project Overview
-
-Businesses don't always struggle because they lack sales. Sometimes, they struggle because they don't know **which products drive growth, which markets underperform, and where revenue opportunities are being lost.**
-
-This project analyzes export business performance to identify growth drivers, uncover low-performing areas, evaluate sales trends, and transform raw business data into actionable insights.
-
-The objective is to help decision-makers understand **what is growing, what is declining, why performance differs, and where to focus next.**
-
-> **The business goal:** Move beyond reporting historical numbers and use data to support smarter, evidence-based business decisions.
+> **End-to-End Data Analysis of 99,400+ Export -Commerce Transactions to Optimize Supply Chain, Increase Retention, and Boost Profitability.**
 
 ---
 
-##  Business Problem
+## 📌 Executive Summary
 
-An export business may generate revenue across multiple products, countries, customers, and time periods. However, total revenue alone cannot explain the complete business picture.
+This repository contains a comprehensive data analytics project conducted on an e-commerce platform dataset comprising **99,441 orders** placed between 2016 and 2018. 
 
-Without structured analysis, decision-makers may face several challenges:
-
-- **Unclear growth drivers:** Which products and markets contribute most to revenue growth?
-- **Hidden low performers:** Which products, countries, or customer segments show weak performance?
-- **Revenue concentration risk:** Is the business too dependent on a small number of products or markets?
-- **Missed expansion opportunities:** Which markets deserve further investigation?
-- **Inefficient resource allocation:** Where should sales, marketing, and operational efforts be prioritized?
-
-### Core Business Question
-
-**How can data help an export business identify its strongest growth opportunities, reduce performance risks, and make better strategic decisions?**
+By analyzing customer purchasing behavior, seller performance, logistics bottlenecks, and payment patterns, this project identifies key operational pain points and outlines actionable business strategies that directly impact **Customer Satisfaction (CSAT)**, **Customer Lifetime Value (LTV)**, and **Bottom-line Revenue**.
 
 ---
 
-## 🛠️ Tools & Technologies
+## 🗂️ Dataset Architecture & Schema
 
-| Tool | Purpose |
-|---|---|
-| Python | Data cleaning, transformation, and exploratory data analysis |
-| Pandas & NumPy | Data manipulation and statistical calculations |
-| SQL | Business queries, aggregations, and performance analysis |
-| Power BI | Interactive dashboards and business performance monitoring |
-| DAX | KPI calculations and analytical measures |
-| Excel | Data inspection and preliminary analysis |
+The analysis is built on a relational structure of **9 cleaned data tables**:
 
----
-
-## 🔍 Analytical Approach
-
-### 1. Data Preparation & Quality
-
-- Inspected the dataset structure, data types, and data quality.
-- Checked for missing values, duplicate records, and inconsistent entries.
-- Standardized relevant columns and prepared data for analysis.
-- Validated key fields before calculating business metrics.
-
-### 2. Exploratory Data Analysis
-
-- Evaluated revenue and sales trends over time.
-- Compared product and country-level performance.
-- Identified high-performing and low-performing segments.
-- Examined revenue contribution and performance variations.
-- Investigated patterns that could indicate business opportunities or risks.
-
-### 3. SQL-Based Business Analysis
-
-Used SQL concepts such as aggregation, filtering, grouping, joins, and window functions where applicable to answer business questions, compare performance, and rank products or markets.
-
-### 4. Power BI Dashboard Development
-
-Designed an interactive dashboard to communicate key findings through:
-
-- Revenue and sales KPIs
-- Product performance comparisons
-- Country and market analysis
-- Growth and low-growth segments
-- Time-based performance trends
-- Business-focused visualizations and filters
+- **`clean_orders.csv`**: Order lifecycle tracking (timestamps for purchase, approval, carrier dispatch, and estimated vs. actual delivery).
+- **`clean_order_items.csv`**: Itemized transaction details including product prices and freight charges.
+- **`clean_customers.csv`**: Geographic location and unique customer identifiers.
+- **`clean_products.csv`**: Product attributes (category, physical dimensions, weight, photos quantity).
+- **`clean_sellers.csv`**: Seller profiles and geographical distribution.
+- **`clean_payments.csv`**: Payment methods, payment installment breakdowns, and values.
+- **`clean_reviews.csv`**: Customer ratings (1-5 stars), response timestamps, and review comments.
+- **`clean_geolocation.csv`**: Geolocation coordinates (latitude/longitude) mapped to postal codes.
+- **`clean_translation.csv`**: Category translations from Portuguese to English.
 
 ---
 
-## 💡 Key Business Questions Investigated
+## 📈 Key Data Metrics & Insights
 
-1. Which products contribute the most to overall revenue?
-2. Which countries or markets demonstrate stronger performance?
-3. Which segments show low growth or declining performance?
-4. How does revenue contribution vary across products and markets?
-5. Are there signs of revenue concentration that may increase business risk?
-6. Which areas should management investigate for potential expansion?
-7. How can business performance be monitored more effectively over time?
-
----
-
-## 📈 Business Impact & Strategic Recommendations
-
-The analysis is designed to support the following business decisions. Recommendations should be validated against the actual dataset and business context.
-
-| Finding to Validate | Potential Business Impact | Recommended Action |
-|---|---|---|
-| A small group of products drives a large share of revenue | Greater exposure to product concentration risk | Evaluate diversification opportunities |
-| Certain markets consistently outperform others | Clearer understanding of stronger market segments | Investigate successful market characteristics |
-| Some products or countries show weak performance | Better visibility into underperforming segments | Investigate pricing, demand, costs, and competition |
-| Sales performance varies across periods | Improved understanding of seasonality and demand patterns | Align planning with observed demand trends |
-| Business KPIs are scattered across reports | Slower performance monitoring | Centralize important metrics in a Power BI dashboard |
-
-### Expected Business Value
-
-- **Better visibility:** Understand performance across products and markets.
-- **Smarter prioritization:** Focus further investigation on high-potential opportunities.
-- **Risk awareness:** Monitor revenue concentration and low-performing segments.
-- **Faster reporting:** Use a centralized dashboard for recurring analysis.
-- **Evidence-based decisions:** Replace assumptions with measurable business indicators.
-
-*Note: These are intended analytical benefits, not claims of measured revenue increases or cost savings.*
+| Metric | Calculated Value |
+| :--- | :--- |
+| **Total Revenue (Items + Freight)** | **R$ 15,843,553.24** |
+| **Total Orders Processed** | **99,441** |
+| **Fulfillment Rate (Delivered)** | **97.02%** (*96,478 orders*) |
+| **Unique Active Customers** | **96,096** |
+| **Active Sellers** | **3,095** |
+| **Catalog Size** | **32,951 Unique Products** |
+| **Average Order Value (Item Price)** | **R$ 120.65** |
+| **Average Review Score** | **4.09 / 5.0** |
+| **Low Customer Ratings (1 & 2 Stars)** | **14.69%** |
+| **Late Delivery Rate** | **7.87%** |
+| **Repeat Customer Rate** | **3.12%** (*Critical Growth Opportunity*) |
 
 ---
 
-## 📊 Key Performance Indicators
+## 🔍 Key Business Problems Identified
 
-Depending on the available dataset, the analysis can include:
+### 1. Extremely Low Customer Retention (3.12% Repeat Purchase Rate)
+- **Problem:** Over **96.8% of customers are one-time buyers**, causing the Customer Acquisition Cost (CAC) to remain excessively high and reducing Customer Lifetime Value (LTV).
 
-- Total Revenue
-- Total Orders or Transactions
-- Revenue by Product
-- Revenue by Country
-- Product and Market Contribution 100%
-- Period-over-Period Growth 1000x%
-- Low-Performing Product or Market Segments
-- Revenue Concentration 65%
+### 2. Delivery Bottlenecks & High Logistics Costs
+- **Problem:** **7.87% of orders exceed estimated delivery dates**. Delayed deliveries correlate directly with 1-star and 2-star ratings, heavily impacting overall platform reputation.
+- Total freight expenses reached **R$ 2.25M**, accounting for **~14.2% of total transaction volume**.
 
---
+### 3. High Preference for Credit Installments
+- **Problem:** **73.9% of transactions are processed via credit card**, with a significant portion opting for multiple installments. Delayed cash flow settlements pose liquidity risks for sellers.
+
+---
+
+## 💡 Strategic Business Solutions & Business Impact
